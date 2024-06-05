@@ -1,3 +1,5 @@
+import "./globals.css"
+
 export const metadata = {
   description: "Next level food application for food lovers",
   keywords: "food, community, great food, next level food",
