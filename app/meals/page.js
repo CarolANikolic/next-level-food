@@ -1,40 +1,26 @@
-import Image from 'next/image';
-
-import mealIcon from '@/public/images/icons/meal.png';
-import communityIcon from '@/public/images/icons/community.png';
-import eventsIcon from '@/public/images/icons/events.png';
-import styles from './page.module.css';
-
-export default function CommunityPage() {
+import Link from "next/link";
+import styles from "./page.module.css"
+import MealsGrid from "@/components/meals/meals-grid";
+export default function MealsPage() {
     return (
-    <>
+        <>
         <header className={styles.header}>
-        <h1>
-            One shared passion: <span className={styles.highlight}>Food</span>
-        </h1>
-        <p>Join our community and share your favorite recipes!</p>
+            <h1>
+                Delicious meals, created {' '}
+                <span className={styles.highlight}>by you</span>
+            </h1>
+            <p>
+                Choose your favotite recipe and cook it yoursef. It is easy and fun!
+            </p>
+            <p className={styles.cta}>
+                <Link href="/meals/share">
+                    Share your favorite recipe
+                </Link>
+            </p>
         </header>
         <main className={styles.main}>
-        <h2>Community Perks</h2>
-
-        <ul className={styles.perks}>
-            <li>
-            <Image src={mealIcon} alt="A delicious meal" />
-            <p>Share & discover recipes</p>
-            </li>
-            <li>
-            <Image src={communityIcon} alt="A crowd of people, cooking" />
-            <p>Find new friends & like-minded people</p>
-            </li>
-            <li>
-            <Image
-                src={eventsIcon}
-                alt="A crowd of people at a cooking event"
-            />
-            <p>Participate in exclusive events</p>
-            </li>
-        </ul>
+            <MealsGrid meals={[]}/>
         </main>
-    </>
+        </>
     );
 }

@@ -1,5 +1,5 @@
 import MainHeader from "@/components/header/main-header";
-import "./globals.css"
+import "./globals.css";
 
 export const metadata = {
   description: "Next level food application for food lovers",
