@@ -10,28 +10,30 @@ export default function MainHeader() {
         <>
             <MainHeaderBackground/>
             <header className={styles.header}>
-        <Link href="/" className={styles.logoContainer}>
-            <div>
-            <Image
-                className={styles.logo}
-                src={logoImg}
-                alt="A plate full of food."
-                priority
-            />
-            </div>
-            NextLevel Food
-        </Link>
+                <div>
+                <Link href="/" className={styles.logoContainer}>
+                    <div>
+                        <Image
+                            className={styles.logo}
+                            src={logoImg}
+                            alt="A plate full of food."
+                            priority
+                        />
+                    </div>
+                    NextLevel Food
+                </Link>
+                </div>              
 
-        <nav className={styles.nav}>
-            <ul>
-            <li>
-                <NavLink href="/meals">Browse Meals</NavLink>
-            </li>
-            <li>
-                <NavLink href="/community">Foodies Community</NavLink>
-            </li>
-            </ul>
-        </nav>
+            <nav className={styles.nav}>
+                <ul>
+                <li>
+                    <NavLink href="/meals">Browse Meals</NavLink>
+                </li>
+                <li>
+                    <NavLink href="/community">Foodies Community</NavLink>
+                </li>
+                </ul>
+            </nav>
     </header>
         </>
 );
