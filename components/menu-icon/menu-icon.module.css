@@ -1,0 +1,40 @@
+.menuDropdownIcon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+}
+
+.bar1, .bar2, .bar3 {
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    transition: all 0.5s;
+}
+
+.changeMenu .bar1 {
+    transform: rotate(-45deg);
+    top: 5px;
+    position: absolute;
+}
+
+.changeMenu .bar2 {
+    opacity: 0;
+}
+
+.changeMenu .bar3 {
+    transform: rotate(45deg);
+    top: 5px;
+    position: absolute;
+}
+
+@media screen and (min-width:1024px) {
+    .menuDropdownIcon {
+        display: none;
+    }
+}
