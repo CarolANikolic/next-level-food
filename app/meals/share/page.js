@@ -1,3 +1,4 @@
+import ImagePicker from '@/components/image-picker/image-picker';
 import styles from './page.module.css';
 
 export default function ShareMealPage() {
@@ -21,25 +22,27 @@ export default function ShareMealPage() {
                         <label htmlFor="email">Your email</label>
                         <input type="email" id="email" name="email" required />
                     </p>
-                <p>
-                    <label htmlFor="title">Title</label>
-                    <input type="text" id="title" name="title" required />
-                </p>
-                <p>
-                    <label htmlFor="summary">Short Summary</label>
-                    <input type="text" id="summary" name="summary" required />
-                </p>
-                <p>
-                    <label htmlFor="instructions">Instructions</label>
-                    <textarea
-                    id="instructions"
-                    name="instructions"
-                    rows="10"
-                    required
-                    ></textarea>
-                </p>
+                    <p>
+                        <label htmlFor="title">Title</label>
+                        <input type="text" id="title" name="title" required />
+                    </p>
+                    <p>
+                        <label htmlFor="summary">Short Summary</label>
+                        <input type="text" id="summary" name="summary" required />
+                    </p>
+                    <p>
+                        <label htmlFor="instructions">Instructions</label>
+                        <textarea
+                        id="instructions"
+                        name="instructions"
+                        rows="10"
+                        required
+                        ></textarea>
+                    </p>
                 </div>
-            IMAGE PICKER
+
+                <ImagePicker/>
+
                 <p className={styles.actions}>
                     <button type="submit">Share Meal</button>
                 </p>
