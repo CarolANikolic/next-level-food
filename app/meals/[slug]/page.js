@@ -1,9 +1,30 @@
 import { getMeal } from "@/lib/meals";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
-function MealDetails({params}) {
+export async function generateMetadata( { params }) {
     const meal = getMeal(params.slug);
+
+    if (!meal) {
+        notFound();
+    }
+    
+    return {
+        description: meal.summary,
+        keywords: `food, community, great food, + ${meal.title}`,
+        viewport: "width=device-width, initial-scale=1.0",
+        title: meal.title
+    }
+}
+
+export default function MealDetails({params}) {
+    const meal = getMeal(params.slug);
+
+    if (!meal) {
+        notFound();
+    }
+
     meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
 
     return (
@@ -31,5 +52,3 @@ function MealDetails({params}) {
         </>
     );
 }
-
-export default MealDetails
