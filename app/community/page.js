@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 import mealIcon from '@/public/images/icons/meal.png';
 import communityIcon from '@/public/images/icons/community.png';
 import eventsIcon from '@/public/images/icons/events.png';
