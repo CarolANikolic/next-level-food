@@ -18,8 +18,8 @@ export async function generateMetadata( { params }) {
     }
 }
 
-export default function MealDetails({params}) {
-    const meal = getMeal(params.slug);
+export default async function MealDetails({params}) {
+    const meal = await getMeal(params.slug);
 
     if (!meal) {
         notFound();
